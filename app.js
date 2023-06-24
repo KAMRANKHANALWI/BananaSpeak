@@ -1,8 +1,14 @@
-//input
-var userName = prompt("Give me username:");
+var btnTranslate = document.querySelector("#btn-translate");
+var txtInput = document.querySelector("#txt-input");
 
-//processing
-var welcomeMessage = "This script works!! " + userName;
+console.log(txtInput);
 
-//output
-alert(welcomeMessage);
+
+btnTranslate.addEventListener("click", clickedHandler())
+
+function clickedHandler() {
+    return function clickEventHandler() {
+        console.log("clicked");
+        console.log("input", txtInput.value);
+    };
+}
